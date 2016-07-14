@@ -1,0 +1,53 @@
+
+<div class="Amenities">
+  <div class="head">
+    <div class="head-vline"></div>
+    Top Rated Amenities In and Around {{Title}}
+  </div>
+  <div class="Amen">
+    <div class="Ame">
+      <div class="Ame-ac">
+        <div class="Ame-ac-corosel">
+          <div class="Ame-ac-corosel-heading">
+            <div class="Ame-ac-corosel-heading-head">{{head}}</div>
+            <div class="Ame-ac-corosel-heading-loc"><i class="fa fa-map-marker" aria-hidden="true"></i>{{city}}</div>
+          </div>
+          <div class="Ame-ac-corosel-mid">
+              <div class="Ame-ac-corosel-mid-navleft"><i class="fa fa-angle-left"></i></div>
+              <div class="Ame-ac-corosel-mid-img"></div>
+              <div class="Ame-ac-corosel-mid-navright"><i class="fa fa-angle-right"></i></div>
+          </div>
+          <div class="Ame-ac-corosel-estb">
+            <div class="Ame-ac-corosel-estb-head">{{Estb}}</div>
+            <div class="Ame-ac-corosel-estb-loc">{{loc}}</div>
+          </div>
+          <div class="Ame-ac-corosel-btn">
+            <div class="Ame-ac-corosel-btn-txt"> <div class="Ame-ac-corosel-btn-txt-elsp"><i class="fa fa-home" aria-hidden="true"></i> </div>See the List  <i class="fa fa-angle-right"></i></div>
+          </div>
+        </div>
+        <div class="Ame-ac-lists">
+          <div class="Ame-ac-lists-lis" *ngFor= "#item of lists">
+            <div class="Ame-ac-lists-lis-icon"><i class="fa {{item.fa}}"></i></div>
+            <div class="Ame-ac-lists-lis-cat">
+              <div class="Ame-ac-lists-lis-cat-name">{{item.Cattype}}</div>
+              <div class="Ame-ac-lists-lis-cat-num">{{item.num}} near this listing</div>
+            </div>
+            <div class="Ame-ac-lists-lis-view"> See All</div>
+            <div class="Ame-ac-lists-lis-view-arw"><i class="fa fa-angle-right"></i></div>
+          </div>
+        </div>
+        <a href = "#" class="Ame-ac-footer">
+          <div class="Ame-ac-footer-btn">
+            <div class="Ame-ac-footer-btn-elsp"><i class="fa fa-home" aria-hidden="true"></i></div>
+            <div class="Ame-ac-footer-btn-txt">See The List<i class="fa fa-angle-right"></i></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="Ame-tiles">
+      <div class="Ame-tiles-vbar"><i class="fa fa-angle-up"></i></div>
+      <module-tile [tile] = tile *ngFor = "#tile of tiles"></module-tile>
+      <div class="Ame-tiles-vbar"><i class="fa fa-angle-down"></i></div>
+    </div>
+  </div>
+</div>
